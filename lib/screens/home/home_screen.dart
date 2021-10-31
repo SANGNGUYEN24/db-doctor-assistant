@@ -16,6 +16,12 @@ class HomeScreen extends StatelessWidget {
         ),
       ),
       body: Body(),
+      floatingActionButton: FloatingActionButton.extended(
+        icon: Icon(Icons.assignment_rounded),
+        label: Text("Your patients",
+            style: TextStyle(fontWeight: FontWeight.bold)),
+        onPressed: () {},
+      ),
     );
   }
 }

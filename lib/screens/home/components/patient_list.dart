@@ -4,8 +4,6 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 
 class PatientList extends StatefulWidget {
-  const PatientList({Key key}) : super(key: key);
-
   @override
   _PatientListState createState() => _PatientListState();
 }
@@ -16,6 +14,7 @@ class _PatientListState extends State<PatientList> {
 
   @override
   void initState() {
+    super.initState();
     _stream = firestore.patientReference.snapshots();
     print("==== $_stream ====");
   }
@@ -36,6 +35,7 @@ class _PatientListState extends State<PatientList> {
                   itemBuilder: (context, index) {
                     var document = snapshot.data.docs[index];
                     return PatientCard(
+                      patientId: document["patientId"],
                       patientName:
                           document["lastName"] + " " + document["firstName"],
                       birthdate: document["birthDate"],

@@ -1,5 +1,3 @@
-import 'package:flutter/material.dart';
-
 class Patient {
   String adDistrict;
   String adProvinceCity;
@@ -16,8 +14,4 @@ class Patient {
   String lastName;
   String patientId;
   String phoneNumber;
-
-  Patient({
-    @required this.patientId,
-  });
 }

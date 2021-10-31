@@ -11,15 +11,17 @@ class Body extends StatelessWidget {
       child: SingleChildScrollView(
         child: Column(
           children: [
-            SizedBox(height: getProportionateScreenHeight(20)),
             HomeHeader(),
             SizedBox(height: getProportionateScreenWidth(10)),
+            Container(
+              padding: EdgeInsets.only(left: 24),
+              alignment: Alignment.topLeft,
+              child: Text(
+                "All patients",
+              ),
+            ),
+            SizedBox(height: getProportionateScreenWidth(10)),
             PatientList(),
-            // Categories(),
-            // SpecialOffers(),
-            // SizedBox(height: getProportionateScreenWidth(30)),
-            // PopularProducts(),
-            // SizedBox(height: getProportionateScreenWidth(30)),
           ],
         ),
       ),
