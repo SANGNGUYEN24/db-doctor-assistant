@@ -53,8 +53,9 @@ class _PatientDetailState extends State<PatientDetail> {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title:
-            Text("Patient information", style: TextStyle(color: kPrimaryColor)),
+        title: Text("Patient information",
+            style:
+                TextStyle(color: kPrimaryColor, fontWeight: FontWeight.bold)),
       ),
       body: doc == null
           ? Center(
@@ -83,7 +84,22 @@ class _PatientDetailState extends State<PatientDetail> {
                         width: 24,
                       ),
                       ElevatedButton.icon(
-                          onPressed: () {},
+                          onPressed: () {
+                            return showDialog(
+                                context: context,
+                                builder: (context) {
+                                  return AlertDialog(
+                                    title: Text(
+                                        "Add this patient to your patients?"),
+                                    actions: [
+                                      TextButton(
+                                          onPressed: () {}, child: Text("NO")),
+                                      TextButton(
+                                          onPressed: () {}, child: Text("YES")),
+                                    ],
+                                  );
+                                });
+                          },
                           icon: Icon(Icons.add_rounded),
                           label: Text("Add to your patients")),
                     ],
