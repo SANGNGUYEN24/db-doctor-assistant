@@ -4,7 +4,7 @@
 
 An simple for an assignment in the course: database systems in 211 semester.
 
-This app is built in a short time, the codes become quite messy 🤦‍♂️
+This app is built in a short time, the codes and UI become quite messy 🤦‍♂️
 
 ## Overview
 <img src="/overview.gif" width="300">
