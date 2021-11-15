@@ -25,6 +25,35 @@ class _DoctorInfoState extends State<DoctorInfo> {
   void initState() {
     super.initState();
     Firestore firestore = new Firestore();
+
+    // firestore.patientReference
+    //     .where("gender", isEqualTo: "male")
+    //     .where("fType", isEqualTo: "0")
+    //     .where("adProvinceCity", isEqualTo: "Nghe An")
+    //     .limit(10)
+    //     .orderBy("birthdate", descending: false);
+    //
+    // int result = 0;
+    // firestore.patientReference
+    //     .where("fType", isGreaterThan: 0)
+    //     .where("firstName", arrayContains: ["a", "ng"])
+    //     .get()
+    //     .then((querySnapshot) {
+    //       querySnapshot.docs.forEach((element) {
+    //         result += 1;
+    //       });
+    //     });
+    // firestore.patientReference
+    //     .where("fType", isGreaterThan: 0)
+    //     .where("lastName", arrayContains: ["a", "ng"])
+    //     .get()
+    //     .then((querySnapshot) {
+    //       querySnapshot.docs.forEach((element) {
+    //         result += 1;
+    //       });
+    //     });
+    // print("Result: $result");
+
     firestore.doctorReference.doc(doctorId).get().then((value) {
       setState(() {
         doctorName = value["doctorName"];

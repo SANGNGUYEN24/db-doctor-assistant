@@ -93,9 +93,20 @@ class _PatientDetailState extends State<PatientDetail> {
                                         "Add this patient to your patients?"),
                                     actions: [
                                       TextButton(
-                                          onPressed: () {}, child: Text("NO")),
+                                          onPressed: () {
+                                            Navigator.pop(context);
+                                          },
+                                          child: Text("NO")),
                                       TextButton(
-                                          onPressed: () {}, child: Text("YES")),
+                                          onPressed: () {
+                                            Navigator.pop(context);
+                                            final snackbar = SnackBar(
+                                                content: Text(
+                                                    "Added to your patients!"));
+                                            ScaffoldMessenger.of(context)
+                                                .showSnackBar(snackbar);
+                                          },
+                                          child: Text("YES")),
                                     ],
                                   );
                                 });
